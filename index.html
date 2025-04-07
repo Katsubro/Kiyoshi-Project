@@ -8,21 +8,18 @@
 </head>
 <body>
   <script>
-  function revealSection() {
-    const aboutSection = document.getElementById('about');
-    const projectSection = document.getElementById('project');
-    const triggerPoint = window.innerHeight / 1.3;
+function revealSection() {
+  const aboutSection = document.getElementById('about');
+  const sectionTop = aboutSection.getBoundingClientRect().top;
+  const triggerPoint = window.innerHeight / 1.3;
 
-    [aboutSection, projectSection].forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      if (sectionTop < triggerPoint) {
-        section.classList.add('reveal');
-      }
-    });
+  if (sectionTop < triggerPoint) {
+    aboutSection.classList.add('reveal');
   }
+}
 
-  window.addEventListener('scroll', revealSection);
-  revealSection();
+window.addEventListener('scroll', revealSection);
+revealSection();
 </script>
   <div class="container">
     <div class="content">
