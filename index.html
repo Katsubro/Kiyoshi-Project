@@ -10,16 +10,18 @@
   <script>
   function revealSection() {
     const aboutSection = document.getElementById('about');
-    const sectionTop = aboutSection.getBoundingClientRect().top;
+    const projectSection = document.getElementById('project');
     const triggerPoint = window.innerHeight / 1.3;
 
-    if (sectionTop < triggerPoint) {
-      aboutSection.classList.add('reveal');
-    }
+    [aboutSection, projectSection].forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop < triggerPoint) {
+        section.classList.add('reveal');
+      }
+    });
   }
 
   window.addEventListener('scroll', revealSection);
-  // Trigger on load
   revealSection();
 </script>
   <div class="container">
