@@ -1,0 +1,63 @@
+/* Reset and background */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #6B6363; /* Matching the image background */
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+/* Icons styles */
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.blueprint-icon,
+.hoodie-icon {
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.blueprint-icon {
+  background-image: url('images/blueprint.png');
+}
+
+.hoodie-icon {
+  background-image: url('images/hoodie.png');
+}
+
+/* Button */
+.explore-button {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 1px solid white;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.explore-button:hover {
+  background-color: white;
+  color: #6B6363;
+}
