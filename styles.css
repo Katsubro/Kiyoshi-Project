@@ -1,112 +1,161 @@
-/* Reset some default styles */
-* {
+/* Reset and background */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  background-color: #6B6363;
+  font-family: Arial, sans-serif;
+  color: white;
+  scroll-behavior: smooth;
 }
 
-/* Body styles */
-body {
-  background-color: #f9f9f9;
-  color: #333;
+.container {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* Container entrance animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInIcons 1s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInIcons {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.blueprint-icon,
+.hoodie-icon {
+  width: 150px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.blueprint-icon:hover,
+.hoodie-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Button */
+.explore-button {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 1px solid white;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.explore-button:hover {
+  background-color: white;
+  color: #6B6363;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7);
+}
+
+/* About Me Section */
+#about {
+  background-color: #5A4E4E;
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
   line-height: 1.6;
 }
 
-/* Header */
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
+/* Scroll reveal effect */
+#about.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Project Section */
+#project {
+  background-color: #4A3F3F;
+  padding: 60px 20px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-/* Navigation */
-nav {
-  background: #444;
-  text-align: center;
-  padding: 10px 0;
+.project-container {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #f39c12;
-}
-
-/* Sections */
-section {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-section h2 {
+#project h2 {
+  font-size: 36px;
   margin-bottom: 20px;
-  font-size: 2em;
-}
-
-/* Images */
-.image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Gallery */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.gallery-item {
-  width: 300px;
-  height: 200px;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Specific background images */
-.hoodie-section {
-  background-image: url('images/hoodie.png');
-}
-
-.blueprint-section {
-  background-image: url('images/blueprint.png');
-}
-
-/* Footer */
-footer {
-  background: #333;
+#project p {
+  font-size: 18px;
+  line-height: 1.6;
   color: white;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 40px;
 }
-
+/* Reveal on scroll */
+#project.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
