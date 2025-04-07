@@ -128,3 +128,34 @@ h1 {
   opacity: 1;
   transform: translateY(0);
 }
+/* Project Section */
+#project {
+  background-color: #4A3F3F;
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.project-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#project h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+#project p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+}
+/* Reveal on scroll */
+#project.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
