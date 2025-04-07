@@ -38,14 +38,13 @@ h1 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.blueprint-icon {
-  background-image: url('images/blueprint.png');
-}
-
-.hoodie-icon {
-  background-image: url('images/hoodie.png');
+.blueprint-icon:hover,
+.hoodie-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
 }
 
 /* Button */
@@ -56,12 +55,13 @@ h1 {
   border-radius: 50px;
   color: white;
   text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .explore-button:hover {
   background-color: white;
   color: #6B6363;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7);
 }
 
 /* About Me Section */
@@ -69,6 +69,9 @@ h1 {
   background-color: #5A4E4E;
   padding: 60px 20px;
   text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .about-container {
@@ -84,4 +87,10 @@ h1 {
 #about p {
   font-size: 18px;
   line-height: 1.6;
+}
+
+/* Scroll reveal effect */
+#about.reveal {
+  opacity: 1;
+  transform: translateY(0);
 }
