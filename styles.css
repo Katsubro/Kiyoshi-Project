@@ -1,161 +1,161 @@
 /* Reset and background */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #6B6363;
-  font-family: Arial, sans-serif;
-  color: white;
-  scroll-behavior: smooth;
-}
-
-.container {
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  opacity: 0;
-  transform: translateY(-20px);
-  animation: fadeInUp 1s ease forwards;
-  animation-delay: 0.2s;
-}
-
-/* Container entrance animation */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-h1 {
-  font-size: 48px;
-  line-height: 1.2;
-  margin-bottom: 40px;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 0.5s;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-.icons {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-bottom: 40px;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInIcons 1s ease forwards;
-  animation-delay: 1s;
-}
-
-@keyframes fadeInIcons {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.blueprint-icon,
-.hoodie-icon {
-  width: 150px;
-  height: 150px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.blueprint-icon:hover,
-.hoodie-icon:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
-}
-
-/* Button */
-.explore-button {
-  display: inline-block;
-  padding: 15px 30px;
-  border: 1px solid white;
-  border-radius: 50px;
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-  animation-delay: 1.5s;
-}
-
-.explore-button:hover {
-  background-color: white;
-  color: #6B6363;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7);
-}
-
-/* About Me Section */
-#about {
-  background-color: #5A4E4E;
-  padding: 60px 20px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.about-container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-#about h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-#about p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* Scroll reveal effect */
-#about.reveal {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* Project Section */
-#project {
-  background-color: #4A3F3F;
-  padding: 60px 20px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.project-container {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-#project h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  color: white;
-}
-
-#project p {
-  font-size: 18px;
-  line-height: 1.6;
-  color: white;
-}
-/* Reveal on scroll */
-#project.reveal {
-  opacity: 1;
-  transform: translateY(0);
-}
+ body {
+   margin: 0;
+   padding: 0;
+   background-color: #6B6363;
+   font-family: Arial, sans-serif;
+   color: white;
+   scroll-behavior: smooth;
+ }
+ 
+ .container {
+   text-align: center;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   opacity: 0;
+   transform: translateY(-20px);
+   animation: fadeInUp 1s ease forwards;
+   animation-delay: 0.2s;
+ }
+ 
+ /* Container entrance animation */
+ @keyframes fadeInUp {
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+ 
+ h1 {
+   font-size: 48px;
+   line-height: 1.2;
+   margin-bottom: 40px;
+   opacity: 0;
+   animation: fadeIn 1s ease forwards;
+   animation-delay: 0.5s;
+ }
+ 
+ @keyframes fadeIn {
+   to {
+     opacity: 1;
+   }
+ }
+ 
+ .icons {
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+   margin-bottom: 40px;
+   opacity: 0;
+   transform: translateY(20px);
+   animation: fadeInIcons 1s ease forwards;
+   animation-delay: 1s;
+ }
+ 
+ @keyframes fadeInIcons {
+   to {
+     opacity: 1;
+     transform: translateY(0);
+   }
+ }
+ 
+ .blueprint-icon,
+ .hoodie-icon {
+   width: 150px;
+   height: 150px;
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+   transition: transform 0.4s ease, box-shadow 0.4s ease;
+ }
+ 
+ .blueprint-icon:hover,
+ .hoodie-icon:hover {
+   transform: scale(1.1);
+   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+ }
+ 
+ /* Button */
+ .explore-button {
+   display: inline-block;
+   padding: 15px 30px;
+   border: 1px solid white;
+   border-radius: 50px;
+   color: white;
+   text-decoration: none;
+   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+   opacity: 0;
+   animation: fadeIn 1s ease forwards;
+   animation-delay: 1.5s;
+ }
+ 
+ .explore-button:hover {
+   background-color: white;
+   color: #6B6363;
+   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.7);
+ }
+ 
+ /* About Me Section */
+ #about {
+   background-color: #5A4E4E;
+   padding: 60px 20px;
+   text-align: center;
+   opacity: 0;
+   transform: translateY(50px);
+   transition: opacity 1s ease, transform 1s ease;
+ }
+ 
+ .about-container {
+   max-width: 600px;
+   margin: 0 auto;
+ }
+ 
+ #about h2 {
+   font-size: 36px;
+   margin-bottom: 20px;
+ }
+ 
+ #about p {
+   font-size: 18px;
+   line-height: 1.6;
+ }
+ 
+ /* Scroll reveal effect */
+ #about.reveal {
+   opacity: 1;
+   transform: translateY(0);
+ }
+ /* Project Section */
+ #project {
+   background-color: #4A3F3F;
+   padding: 60px 20px;
+   text-align: center;
+   opacity: 0;
+   transform: translateY(50px);
+   transition: opacity 1s ease, transform 1s ease;
+ }
+ 
+ .project-container {
+   max-width: 600px;
+   margin: 0 auto;
+ }
+ 
+ #project h2 {
+   font-size: 36px;
+   margin-bottom: 20px;
+   color: white;
+ }
+ 
+ #project p {
+   font-size: 18px;
+   line-height: 1.6;
+   color: white;
+ }
+ /* Reveal on scroll */
+ #project.reveal {
+   opacity: 1;
+   transform: translateY(0);
+ }
